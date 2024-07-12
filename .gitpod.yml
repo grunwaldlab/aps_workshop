@@ -1,6 +1,6 @@
 image: nfcore/gitpod:latest
 
 tasks:
-- name: allgood
-  command:
-    echo "You are lucky and ready!!!"
+  - name: allgood
+    command:
+      - echo "You are lucky and ready!!!"
