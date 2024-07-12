@@ -2,5 +2,5 @@ image: nfcore/gitpod:latest
 
 tasks:
 - name: allgood
-  command: |
+  command:
     echo "You are lucky and ready!!!"
