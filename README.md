@@ -1,4 +1,5 @@
 # aps_workshop
 
+This is the github repo you need to start our gitpod workspace:
 
-![test](https://github.com/grunwaldlab/aps_workshop/assets/28018971/1a8ec65c-ac88-4f69-8999-dfb72b9ea35d)
+https://github.com/grunwaldlab/aps_workshop
