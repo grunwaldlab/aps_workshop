@@ -2,4 +2,4 @@ image: nfcore/gitpod:latest
 
 tasks:
   - name: allgood
-    command: echo "You are lucky and ready!!!"
+    before: echo "You are lucky and ready!!!"
