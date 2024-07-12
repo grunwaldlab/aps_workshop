@@ -1,8 +1,13 @@
 image: nfcore/gitpod:latest
 
+vscode:
+  extensions:
+    - ms-vscode.cpptools
+
 tasks:
-  - init: echo "Initializing workspace..."
   - name: allgood
-    command: |
-      echo "You are lucky and ready!!!"
-      bash
+    command: echo "You are lucky and ready!!!"
+
+ports:
+  - port: 8000
+    onOpen: open-preview
