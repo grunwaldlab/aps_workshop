@@ -1,5 +1,8 @@
 image: nfcore/gitpod:latest
 
 tasks:
+  - init: echo "Initializing workspace..."
   - name: allgood
-    before: echo "You are lucky and ready!!!"
+    command: |
+      echo "You are lucky and ready!!!"
+      bash
