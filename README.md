@@ -1,5 +1,9 @@
 # aps_workshop
 
-This is the github repo you need to start our gitpod workspace:
+1) Go to gitpod.io to login:
 
-https://github.com/grunwaldlab/aps_workshop
+   https://gitpod.io/
+
+2) This is the github repo you need to start our gitpod workspace:
+
+  https://github.com/grunwaldlab/aps_workshop
