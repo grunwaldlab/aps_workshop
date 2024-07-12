@@ -1,13 +1,1 @@
 image: nfcore/gitpod:latest
-
-vscode:
-  extensions:
-    - ms-vscode.cpptools
-
-tasks:
-  - name: allgood
-    command: echo "You are lucky and ready!!!"
-
-ports:
-  - port: 8000
-    onOpen: open-preview
