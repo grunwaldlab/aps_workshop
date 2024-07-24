@@ -1,1 +1,8 @@
 image: zacharyfoster/pathogensurveillance-workshop:0.8
+
+tasks:
+  - name: Restore .env file
+    command: |
+      conda init
+      bash
+      conda activate qc
