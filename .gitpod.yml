@@ -2,6 +2,5 @@ image: zacharyfoster/pathogensurveillance-workshop:0.8
 
 tasks:
   - name: Initialize conda 
-    command: |
-      conda init
-      bash --init-file <(echo "conda activate qc")
+    init: |
+      conda activate qc
