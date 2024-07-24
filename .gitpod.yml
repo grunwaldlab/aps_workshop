@@ -1,8 +1,7 @@
 image: zacharyfoster/pathogensurveillance-workshop:0.8
 
 tasks:
-  - name: Restore .env file
+  - name: Initialize conda 
     command: |
       conda init
-      bash
-      conda activate qc
+      bash --init-file <(echo "conda activate qc")
