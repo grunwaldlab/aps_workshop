@@ -1,1 +1,1 @@
-image: nfcore/gitpod:latest
+image: zacharyfoster/pathogensurveillance-workshop:0.5
