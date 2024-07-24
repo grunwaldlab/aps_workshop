@@ -2,9 +2,8 @@ image: zacharyfoster/pathogensurveillance-workshop:0.8
 
 tasks:
   - name: Initialize conda 
-    init: |
-      conda init
-  - name: clear terminal
     command: |
+      conda init bash
+      source ${HOME}/.bashrc
       conda activate qc
       clear
