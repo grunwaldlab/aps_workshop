@@ -11,3 +11,5 @@ tasks:
 vscode:
   extensions:
     - anwar.papyrus-pdf
+    - ritwickdey.liveserver
+    
