@@ -74,22 +74,22 @@ We are using *Gitpod* to provide hands-on experience with installing and using t
 
 You MUST do the following steps before the workshop starts! It will take a few minutes to set up a **GitHub** account and a **Gitpod** account if you don't already have them:
 
-### 1. **Step 00**  
+#### 1. **Step 00**  
    Click on [this link](https://gitpod.io/new#https://github.com/grunwaldlab/aps_workshop) in any desktop web browser (**Note: Safari sometimes has problems on a Mac, so use Chrome or Mozilla instead)**  
    ![Step 00](content/Untitled%206.png)
 
-### 2. **Step 01**  
+#### 2. **Step 01**  
    It will ask you to sign up with a GitHub account. If you don't have one, please create an account at [GitHub](https://github.com).  
    ![Step 01](content/Untitled%207.png)
 
-### 3. **Step 02**  
+#### 3. **Step 02**  
    Once you are signed in to GitHub, click on the Gitpod link above again. It will try to launch our Gitpod workspace using your GitHub login. You will need to give Gitpod permission to access (only) the email address on your GitHub account. Follow the Gitpod prompts to ensure you are a real human and won't misuse their resources. **Note: if it asks you to connect your LinkedIn, you can skip that - you will still get 50 hours :-)**
 
-### 4. **Step 03**  
+#### 4. **Step 03**  
    Gitpod will ask you to select which code editor and which machine size to start. The defaults are fine. So just click **Continue**  
    ![Step 03](content/Untitled%208.png)
 
-### 5. **Step 04**  
+#### 5. **Step 04**  
    Once the Gitpod workspace starts (typically in less than a minute), you will see the following in your desktop web browser: a file browser on your left, a text editor top right, and a Linux terminal bottom right.  
    ![Step 04](content/Untitled.jpeg)
 
