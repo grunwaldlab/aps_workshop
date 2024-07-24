@@ -8,3 +8,7 @@ tasks:
     command: |
       conda activate qc
       clear
+      
+vscode:
+  extensions:
+    - anwar.papyrus-pdf
