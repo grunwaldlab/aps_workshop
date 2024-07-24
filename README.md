@@ -24,7 +24,7 @@ This session is part of [**Nanopore Sequencing and Whole Genome Assembly and Ann
 
 <table>
   <tr>
-    <td align="center"><strong>Zach Foster</strong><br><img src="content/Untitled.png" width="150"></td>
+    <td align="center"><strong>Zach Foster</strong><br><img src="content/Untitled.png" width="300"></td>
     <td align="center"><strong>Alex Weisberg</strong><br><img src="content/Untitled%201.png" width="150"></td>
     <td align="center"><strong>Camilo H. Parada Rojas</strong><br><img src="content/Untitled%202.png" width="150"></td>
   </tr>
