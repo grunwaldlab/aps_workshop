@@ -12,5 +12,4 @@ vscode:
   extensions:
     - anwar.papyrus-pdf
     - ritwickdey.liveserver
-    - vscode_rainbow_csv
-    
+    - mechatroner.rainbow-csv
