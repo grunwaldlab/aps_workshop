@@ -1,4 +1,4 @@
-image: zacharyfoster/pathogensurveillance-workshop:0.9
+image: zacharyfoster/pathogensurveillance-workshop:0.10
 
 tasks:
   - name: Initialize conda 
