@@ -2,8 +2,19 @@
 
 This session is part of [**Nanopore Sequencing and Whole Genome Assembly and Annotation with nf-core/pathogensurveillance**](https://events.rdmobile.com/Sessions/Details/2316143)
 
+---
+
+## Table of Contents
+
+1. [Resources](#resources)
+2. [Prerequisites](#prerequisites)
+3. [Setting up Gitpod](#setting-up-gitpod)
+4. [Session Leader(s) Bios](#session-leaders-bios)
+
+---
+
 <details>
-<summary>&nbsp;<h3><strong>Resources</strong></h3></summary>
+<summary><h2><strong>Links to resourcers</strong></h2></summary>
   
 - [`pathogensurveillance` repository](https://github.com/grunwaldlab/pathogensurveillance)
 - [`psminer` repository](https://github.com/grunwaldlab/psminer)
@@ -12,18 +23,19 @@ This session is part of [**Nanopore Sequencing and Whole Genome Assembly and Ann
 
 ---
 
-## Prerequisites
+<details>
+<summary><h2><strong>⚠️ Do this before the workshop⚠️</strong></h2></summary>
 
-- **Some familiarity with the Linux command-line interface**  
-  If not, look here for resources:
+#### 1. Gain some familiarity with Linux command-line interface
+  Look here for resources:
   - [Command Line and Filesystem](https://open.oregonstate.education/computationalbiology/chapter/the-command-line-and-filesystem/)
   - [PCfB Appendices](content/PCfB_Appendices.pdf)
 
-- **GitHub account**  
+#### 2. GitHub account
   If you don't have one, please create an account at [GitHub](https://github.com):
   - [Creating an Account on GitHub](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github)
 
-- **Understanding of genomic terms**:
+#### 3. Understanding of genomic terms:
   - Reads
   - Genome
   - Populations
@@ -33,13 +45,16 @@ This session is part of [**Nanopore Sequencing and Whole Genome Assembly and Ann
   - Variants/SNPs
   - Homology
 
-- **Understanding of the need for bioinformatics workflows**
+#### 4. Understanding of the need for bioinformatics workflows
 
-- **Understanding the general role and input/output files**
+#### 5. Understanding the general role and input/output files
+  
+</details>
 
 ---
 
-## Setting up Gitpod
+<details>
+<summary><h2><strong>Setting up Gitpod</strong></h2></summary>
 
 ### What is Gitpod?
 
@@ -69,6 +84,8 @@ You MUST do the following steps before the workshop starts! It will take a few m
    ![Step 04](content/Untitled.jpeg)
 
 > *If you are doing this before the workshop, please go to [gitpod.io/workspaces](https://gitpod.io/workspaces) to delete any running workspaces (in green) so that you don't use up your 50 hours per month* 🙂
+
+</details>
 
 ---
 
