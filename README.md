@@ -2,24 +2,13 @@
 
 This session is part of [**Nanopore Sequencing and Whole Genome Assembly and Annotation with nf-core/pathogensurveillance**](https://events.rdmobile.com/Sessions/Details/2316143)
 
----
-
-## Table of Contents
-
-1. [Resources](#resources)
-2. [Prerequisites](#prerequisites)
-3. [Setting up Gitpod](#setting-up-gitpod)
-X. [Session Leader(s) Bios](#session-leaders-bios)
----
-
 <details>
-<summary>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3><strong>Resources</strong></h3></summary>
+<summary>&nbsp;<h3><strong>Resources</strong></h3></summary>
   
 - [`pathogensurveillance` repository](https://github.com/grunwaldlab/pathogensurveillance)
 - [`psminer` repository](https://github.com/grunwaldlab/psminer)
 
 </details>
-
 
 ---
 
