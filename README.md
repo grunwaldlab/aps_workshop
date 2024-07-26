@@ -169,9 +169,8 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
 
     2.  Now take a look at the compiled multiqc report
 
-        1.  Go over to the menu on the left and under `APS_WORKSHOP` , click `multiqc_nanoplot`, and then right click `multiqc_report.html` and select the first choice, `Open with Live Server`.
-
-        -   Take a look at the new browser window that opens with your report
+         -    Go over to the menu on the left and under `APS_WORKSHOP` , click `multiqc_nanoplot`, and then right click `multiqc_report.html` and select the first choice, `Open with Live Server`.
+         -    Take a look at the new browser window that opens with your report
 
 -   **Discuss**
 
