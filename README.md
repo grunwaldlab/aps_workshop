@@ -1,11 +1,18 @@
-# PathogenSurveillance Workshop
+# `pathogensurveillance` workshop
 
 > 📗 This session is part of [**Nanopore Sequencing and Whole Genome Assembly and Annotation with nf-core/pathogensurveillance**](https://events.rdmobile.com/Sessions/Details/2316143)
+
+<p align="center">
+  <img src="content/conference_logo.png" alt="Conference Logo" width="150" style="margin-right: 20px;"/>
+  <img src="content/OregonState_logo.png" alt="Oregon State University Logo" width="200" style="margin-right: 40px;"/>
+  <img src="content/USDA_logo.png" alt="USDA Logo" width="200" style="margin-right: 20px;"/>
+  <img src="content/nfcore_logo.png" alt="nf-core Logo" width="200"/>
+</p>
 
 ---
 
 <details>
-<summary style="font-size: 1.5em; font-weight: bold;">🧵 Links to resources</summary>
+<summary style="font-size: 1.5em; font-weight: bold;"> ♟️ Links to resources</summary>
   
 - [`pathogensurveillance` repository](https://github.com/grunwaldlab/pathogensurveillance)
 - [`psminer` repository](https://github.com/grunwaldlab/psminer)
@@ -15,7 +22,7 @@
 ---
 
 <details>
-<summary style="font-size: 1.5em; font-weight: bold;">🧵 Do this before the workshop @Camilo </summary>
+<summary style="font-size: 1.5em; font-weight: bold;"> 🚩 Do this before the workshop @Camilo </summary>
 
 #### 1. Gain some familiarity with Linux command-line interface
   Look here for resources:
@@ -23,18 +30,29 @@
   - [PCfB Appendices](content/PCfB_Appendices.pdf)
 
 #### 2. GitHub account
-  If you don't have one, please create an account at [GitHub](https://github.com):
+  If you don't have one, please create an account by going to [GitHub](https://github.com):
   - [Creating an Account on GitHub](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github)
 
 #### 3. Understanding of genomic terms:
-  - Reads
-  - Genome
-  - Populations
-  - Contigs
-  - Annotations
-  - Phylogenies
-  - Variants/SNPs
-  - Homology
+
+  - **Annotation**: The process of identifying and marking the locations of genes and other features in a genome.
+  - **Assembly**: The process of piecing together shorter DNA sequences into longer, continuous sequences known as contigs.
+  - **BAM File**: A binary format for storing DNA sequence alignments.
+  - **Bootstrap values**: Statistical measures that provide a confidence level for each branch in a phylogenetic tree.
+  - **Contig**: A contiguous sequence of DNA that has been assembled from overlapping reads.
+  - **Core genes**: Genes that are present in all genomes of a given species.
+  - **Coverage**: The number of times a particular region of the genome is sequenced.
+  - **FASTQ File**: A text-based format for storing both a nucleotide sequence and its corresponding quality scores.
+  - **Genome**: The complete set of genes or genetic material present in a cell or organism.
+  - **GFF file**: A file format used to hold information about gene annotations.
+  - **Homology**: Similarity in sequence of a protein or nucleic acid between organisms due to shared ancestry.
+  - **k-mers**: Substrings of length k that are used in various bioinformatics analyses.
+  - **N50**: A statistic used to measure the quality of an assembly; the length of the shortest contig at 50% of the total assembly length.
+  - **Pangenome**: The entire set of genes found in all strains of a particular species.
+  - **Read Depth**: The number of times a nucleotide is read during sequencing.
+  - **SNP (Single Nucleotide Polymorphism)**: A variation at a single position in a DNA sequence among individuals.
+  - **Variant calling**: The process of identifying variants from sequence data.
+  - **VCF (Variant Call Format)**: A file format used to store gene sequence variations.
 
 #### 4. Understanding of the need for bioinformatics workflows
 
