@@ -126,10 +126,8 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
 
 -   **Running NanoPlot**
 
-    *Information on read file: For the purposes of the tutorial, our concatenated read file is called: `xan_22-331_nanopore.fastq.gz`*
-
-    *These are the reads for a xanthomonas pelargoni strain*
-
+    Information on read files: For the purposes of the tutorial, our concatenated read files are called: `xan_22-331_nanopore.fastq.gz` and `xan_22-323_nanopore.fastq.gz`. These are the reads for *Xanthomonas* strains.
+    
     **Let's finally start using Gitpod!**
 
     -   We will type all commands in Terminal and view results in left window under explorer
