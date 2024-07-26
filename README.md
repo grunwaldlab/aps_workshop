@@ -11,12 +11,16 @@ This session is part of [**Nanopore Sequencing and Whole Genome Assembly and Ann
 3. [Setting up Gitpod](#setting-up-gitpod)
 X. [Session Leader(s) Bios](#session-leaders-bios)
 ---
-<details>
-<summary> ## Resources </summary>
 
+<details>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3><strong>Resources</strong></h3></summary>
+  
 - [`pathogensurveillance` repository](https://github.com/grunwaldlab/pathogensurveillance)
 - [`psminer` repository](https://github.com/grunwaldlab/psminer)
+
 </details>
+
+
 ---
 
 ## Prerequisites
