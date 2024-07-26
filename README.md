@@ -104,19 +104,15 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
 
 ------------------------------------------------------------------------
 
-<details>
-<summary><h3 style="display: inline;">A note on how to organize reads after a Nanopore sequencing run</h3></summary>
+### A note on how to organize reads after a Nanopore sequencing run
 
 -   Once you complete a Nanopore run, you will need to **concatenate individual FASTQ files** within each sample sub-directory
 -   If this is new for you:
-    -   Go to your sequencing run directory and locate `fastq_pass` sub-directory
-    -   For each barcoded sample, use the `cat` command to combined all smaller FASTQ files into single FASTQ file and then choose a desired name for this
-    -   Example command (assuming you are in your Nanopore run directory in the `fastq_pass` subdirectory, and you have a directory called `barcode01`): `cat barcode01/*.fastq.gz > barcode01.fastq.gz`
+    1.  Go to your sequencing run directory and locate `fastq_pass` sub-directory
+    2.  For each barcoded sample, use the `cat` command to combined all smaller FASTQ files into single FASTQ file and then choose a desired name for this
+    3.  Example command (assuming you are in your Nanopore run directory in the `fastq_pass` subdirectory, and you have a directory called `barcode01`): `cat barcode01/*.fastq.gz > barcode01.fastq.gz`
 
-</details>
-
-<details>
-<summary><h3 style="display: inline;">Run NanoPlot to obtain read QC stats per barcoded sample</h3></summary>
+### Run NanoPlot to obtain read QC stats per barcoded sample
 
 [NanoPlot](https://github.com/wdecoster/NanoPlot) is a plotting tool for long read sequencing data and alignments
 
@@ -149,13 +145,13 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
 
     **Command 1** for sample `xan_22-331`
 
-    ```bash
+    ``` bash
     NanoPlot -t 2 -o ./qc_nanoplot/NanoPlot_xan_22-331 -p xan_22-331 --loglength -f png --plots dot --title xan_22-331 --fastq /data/reads/xan_22-331_nanopore.fastq.gz
     ```
 
     **Command 2** for `xan_22-323`
 
-    ```bash
+    ``` bash
     NanoPlot -t 2 -o ./qc_nanoplot/NanoPlot_xan_22-323 -p xan_22-323 --loglength -f png --plots dot --title xan_22-323 --fastq /data/reads/xan_22-323_nanopore.fastq.gz
     ```
 
@@ -163,7 +159,7 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
 
     [multiqc](https://multiqc.info/) gives us nice summary of both NanoPlot directories at once. This command assumes that we are within the directory with our newly created NanoPlot folder
 
-    ```bash
+    ``` bash
     multiqc qc_nanoplot -o multiqc_nanoplot
     ```
 
@@ -183,10 +179,7 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
     -   Which output files are most informative
     -   Do you prefer one output format over others
 
-</details>
-
-<details>
-<summary><h3 style="display: inline;">Run Flye to obtain long read assembly for a *xanthomonas* sample</h3></summary>
+### Run Flye to obtain long read assembly for a *xanthomonas* sample
 
 Flye is a de novo assembler and can be used with both PacBio and Oxford Nanopore long reads. It is versatile and inputs can be both prokayote or eukaryote reads. After initial assembly, there are polishing steps.
 
@@ -199,7 +192,7 @@ Flye is a de novo assembler and can be used with both PacBio and Oxford Nanopore
 
     -   An example of how we ran flye is here:
 
-        ```bash
+        ``` bash
         python3 flye -t 8 -o flye_xan_22-331 --meta --scaffold --nano-hq /data/reads/xan_22-331_nanopore.fastq.gz
         ```
 
@@ -213,10 +206,7 @@ Flye is a de novo assembler and can be used with both PacBio and Oxford Nanopore
 
         -   We had to use the the short read [SPAdes](https://github.com/ablab/spades) assembler to generate these assemblies
 
-</details>
-
-<details>
-<summary><h3 style="display: inline;">Run QUAST to obtain assembly stats</h3></summary>
+### Run QUAST to obtain assembly stats
 
 QUality ASsessment Tool ([QUAST](https://github.com/ablab/quast)) is used to generate some assembly QC reports. This program has a range features to evaluate and assess assembly quality, including how contiguous your assembly, N50, L50, and more.
 
@@ -228,7 +218,7 @@ As an optional input, users can input a reference by which to compare new assemb
 
     **Command 1:**
 
-    ```bash
+    ``` bash
     quast cli_data/xan_22-331_nanopore_flye.fna -o qc_quast/xan_22-331_longread
     ```
 
@@ -240,7 +230,7 @@ As an optional input, users can input a reference by which to compare new assemb
 
         **Command 2:**
 
-        ```bash
+        ``` bash
         quast cli_data/xan_22-331_shortread_highercov_spades.fna -o qc_quast/xan_22-331_shortread_higher_cov
         ```
 
@@ -248,13 +238,13 @@ As an optional input, users can input a reference by which to compare new assemb
 
         **Command 3:**
 
-        ```bash
+        ``` bash
         quast cli_data/xan_22-331_shortread_lowcov_spades.fna -o qc_quast/xan_22-331_shortread_low_cov
         ```
 
 -   **Compile results using multiqc**
 
-    ```bash
+    ``` bash
     multiqc qc_quast -o multiqc_quast
     ```
 
@@ -262,22 +252,19 @@ As an optional input, users can input a reference by which to compare new assemb
 
 -   **Review results**
 
-    -   Look at QUAST directories under `qc_quast` to see what outputs were produced
-    -   To get a summary of all your results, let's check out the multiqc report.
-    -   Go over to the menu on the left and under `APS_WORKSHOP` , click `multiqc_quast`, then right click `multiqc_report.html` and select the first choice, `Open with Live Server`.
-        -   Take a look at the new tab that opens.
+    1.  Look at QUAST directories under `qc_quast` to see what outputs were produced
+    2.  To get a summary of all your results, let's check out the multiqc report.
+    3.  Go over to the menu on the left and under `APS_WORKSHOP` , click `multiqc_quast`, then right click `multiqc_report.html` and select the first choice, `Open with Live Server`.
+    4.  Take a look at the new tab that opens.
 
 -   **Discuss**
 
     -   What do you observe about the assembly stats when comparing the long read vs. short read assemblies?
     -   How do you think incorporating a reference as input into QUAST help to better assess assembly quality?
 
-</details>
+### Run Bandage to examine assembly graphs
 
-<details>
-<summary><h3 style="display: inline;">Run Bandage to examine assembly graphs</h3></summary>
-
-**Bioinformatics Application for Navigating *De novo* Assembly Graphs Easily (**[Bandage](https://rrwick.github.io/Bandage/)) is a program to visualize assembly graphs rapidly. Allows users to quickly see connections between contigs and also quickly see if there are problematic regions of the assembly
+**Bioinformatics Application for Navigating *De novo* Assembly Graphs Easily (**[Bandage](https://rrwick.github.io/Bandage/)) is a program to visualize assembly graphs rapidly. Allows users to quickly see connections between contigs and also quickly see if there are problematic regions of the assembly
 
 ------------------------------------------------------------------------
 
@@ -298,7 +285,7 @@ Select how you want to run Bandage
 
     **Command 1:**
 
-    ```bash
+    ``` bash
     mkdir qc_bandage
     Bandage image cli_data/xan_22-331_nanopore_flye.gfa qc_bandage/xan_22-331_nanopore.png
     ```
@@ -311,7 +298,7 @@ Select how you want to run Bandage
 
     **Command 2:**
 
-    ```bash
+    ``` bash
     Bandage image cli_data/xan_22-331_shortread_highercov_spades.gfa qc_bandage/xan_22-331_shortread_highercov_spades.png
     ```
 
@@ -319,7 +306,7 @@ Select how you want to run Bandage
 
     **Command 3:**
 
-    ```bash
+    ``` bash
     Bandage image cli_data/xan_22-331_shortread_lowcov_spades.gfa qc_bandage/xan_22-331_shortread_lowcov_spades.png
     ```
 
@@ -331,10 +318,7 @@ Select how you want to run Bandage
     -   What do you see?
     -   Which assembly seems best?
 
-</details>
-
-<details>
-<summary><h3 style="display: inline;">Next steps for manual workflow</h3></summary>
+### Next steps for manual workflow
 
 The above exercises were intended to give a framework for what is involved in analysis of ONT Nanopore long read data, when we do each step manually. A full analysis of the reads of several bacterial strains is multi-step and dictated by a researcher's specific goals.
 
@@ -342,16 +326,15 @@ The above exercises were intended to give a framework for what is involved in an
 
 **Subsequent steps include (but are not limited to):**
 
-1.  Annotation
-2.  Using tools like [PIRATE](https://github.com/SionBayliss/PIRATE) to identify and classify orthologous gene families, and then constructing robust core gene phylogenies
-3.  Generating POCP (Percent of conserved proteins) and ANI (Average nucleotide identify) matrices
-4.  Identifying appropriate reference genomes to then do variant call analyses
-    1.  Constructing SNP trees and minimum spanning networks
+*  Annotation
+*  Using tools like [PIRATE](https://github.com/SionBayliss/PIRATE) to identify and classify orthologous gene families, and then constructing robust core gene phylogenies
+*  Generating POCP (Percent of conserved proteins) and ANI (Average nucleotide identify) matrices
+*  Identifying appropriate reference genomes to then do variant call analyses
+    *  Constructing SNP trees and minimum spanning networks
 
 </details>
 
-</details>
-------------------------------------------------------------------------
+---
 
 <details>
 <summary style="font-size: 1.5em; font-weight: bold;">🧵 Running the pathogensurveillance pipeline in gitpod @Zach </summary>
