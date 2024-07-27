@@ -1,6 +1,14 @@
 # `pathogensurveillance` workshop
 
 > 📗 This session is part of [**Nanopore Sequencing and Whole Genome Assembly and Annotation with nf-core/pathogensurveillance**](https://events.rdmobile.com/Sessions/Details/2316143)
+>  1. Setting up Gitpod
+>  2. Nik's overview
+>  3. Command line introduction
+>  4. Nanopore read and assembly processing
+>  5. BREAK
+>  6. Introducing the pathogensurveillance and reports
+>  7. Exploring outputs
+
 
 <p align="center">
   <img src="content/conference_logo.png" alt="Conference Logo" width="150" style="margin-right: 20px;"/>
