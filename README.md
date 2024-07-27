@@ -139,8 +139,22 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
     2.  Return/enter
     3.  Let NanoPlot run (takes \< 1 minute)
     4.  Repeat for second strain
+ 
+    **In preparation**
+
+    Assuming you have the pipeline still running, open new Terminal instance, by clicking the `+` in the bottom right of this pane. 
+
+    In this new instance, we need to activate a conda environment
+
+     ``` bash
+    conda activate qc
+    ```
 
     **Command 1** for strain`xan_22-331`
+
+    ``` bash
+    NanoPlot -t 2 -o ./qc_nanoplot/NanoPlot_xan_22-331 -p xan_22-331 --loglength -f png --plots dot --title xan_22-331 --fastq /data/reads/xan_22-331_nanopore.fastq.gz
+    ```
 
     ``` bash
     NanoPlot -t 2 -o ./qc_nanoplot/NanoPlot_xan_22-331 -p xan_22-331 --loglength -f png --plots dot --title xan_22-331 --fastq /data/reads/xan_22-331_nanopore.fastq.gz
