@@ -98,6 +98,23 @@ You MUST do the following steps before the workshop starts! It will take a few m
 
 ---
 <details>
+<summary style="font-size: 1.5em; font-weight: bold;">🧵 Running the pathogensurveillance pipeline in gitpod @Zach </summary>
+
+<aside>
+<img src="content/logo.png" alt="content/logo.png" width="40px" /> nf-core/pathogensurveillance is a population genomic pipeline for pathogen diagnosis, variant detection, and biosurveillance. The pipeline accepts the paths to raw reads for one or more organisms (in the form of a CSV file) and creates reports in the form of interactive HTML reports or PDF documents. Significant features include the ability to analyze unidentified eukaryotic and prokaryotic samples, creation of reports for multiple user-defined groupings of samples, automated discovery and downloading of reference assemblies from NCBI RefSeq, and rapid initial identification based on k-mer sketches followed by a more robust core genome phylogeny and SNP-based phylogeny.
+
+</aside>
+
+
+```
+nextflow run -latest -resume -profile conda 'https://github.com/grunwaldlab/pathogensurveillance' --sample_data aps_workshop.csv --out_dir output --download_bakta_db
+```
+
+</details>
+
+---
+
+<details>
 <summary style="font-size: 1.5em; font-weight: bold;">🧵 Assessing read and assembly quality after ONT run @Martha</summary> 
 
 Once a Nanopore run is complete, we need a way to critically assess read quality on a per sample basis, in order to decide if we can continue with downstream analysis.
@@ -344,24 +361,6 @@ The above exercises were intended to give a framework for what is involved in an
     *  Constructing SNP trees and minimum spanning networks
 
 </details>
-
----
-
-<details>
-<summary style="font-size: 1.5em; font-weight: bold;">🧵 Running the pathogensurveillance pipeline in gitpod @Zach </summary>
-
-<aside>
-<img src="content/logo.png" alt="content/logo.png" width="40px" /> nf-core/pathogensurveillance is a population genomic pipeline for pathogen diagnosis, variant detection, and biosurveillance. The pipeline accepts the paths to raw reads for one or more organisms (in the form of a CSV file) and creates reports in the form of interactive HTML reports or PDF documents. Significant features include the ability to analyze unidentified eukaryotic and prokaryotic samples, creation of reports for multiple user-defined groupings of samples, automated discovery and downloading of reference assemblies from NCBI RefSeq, and rapid initial identification based on k-mer sketches followed by a more robust core genome phylogeny and SNP-based phylogeny.
-
-</aside>
-
-
-```
-nextflow run -latest -resume -profile conda 'https://github.com/grunwaldlab/pathogensurveillance' --sample_data aps_workshop.csv --out_dir output --download_bakta_db
-```
-
-</details>
-
 
 ---
 
