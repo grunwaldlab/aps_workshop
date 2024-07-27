@@ -130,8 +130,7 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
     
     **Let's finally start using Gitpod!**
 
-    -   We will type all commands in Terminal and view results in left window under explorer
-    -   Make sure you have clicked on <https://gitpod.io/new#https://github.com/grunwaldlab/aps_workshop>
+    -   We will type all commands in Terminal and view results in left window under Explorer
     -   IMPORTANT: Make sure you remain in your work directory:`/workspace/aps_workshop`
 
     **Let's now run NanoPlot on the reads of two strains**
@@ -139,15 +138,15 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
     1.  Copy and paste commands one at a time in Terminal
     2.  Return/enter
     3.  Let NanoPlot run (takes \< 1 minute)
-    4.  Repeat for second sample
+    4.  Repeat for second strain
 
-    **Command 1** for sample `xan_22-331`
+    **Command 1** for strain`xan_22-331`
 
     ``` bash
     NanoPlot -t 2 -o ./qc_nanoplot/NanoPlot_xan_22-331 -p xan_22-331 --loglength -f png --plots dot --title xan_22-331 --fastq /data/reads/xan_22-331_nanopore.fastq.gz
     ```
 
-    **Command 2** for `xan_22-323`
+    **Command 2** for strain `xan_22-323`
 
     ``` bash
     NanoPlot -t 2 -o ./qc_nanoplot/NanoPlot_xan_22-323 -p xan_22-323 --loglength -f png --plots dot --title xan_22-323 --fastq /data/reads/xan_22-323_nanopore.fastq.gz
@@ -174,17 +173,17 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
 
     -   How do your reads look for each sample?
     -   Does it seem reasonable to proceed with next steps?
-    -   Which output files are most informative
-    -   Do you prefer one output format over others
+    -   Which output files are most informative?
+    -   Do you prefer one output format over others?
 
-### Run Flye to obtain long read assembly for a *xanthomonas* sample
+### Run Flye to obtain long read assembly for a *xanthomonas* strain
 
-Flye is a de novo assembler and can be used with both PacBio and Oxford Nanopore long reads. It is versatile and inputs can be both prokayote or eukaryote reads. After initial assembly, there are polishing steps.
+Flye is a de novo assembler and can be used with both PacBio and Oxford Nanopore long reads. It is versatile and inputs can be both reads from prokaryotes and eukaryotes. After initial assembly, there are polishing steps.
 
 ------------------------------------------------------------------------
 
 -   **Information on running flye**
-    -   Once we are assured that read quality looks decent, based on NanoPlot results, we can begin the assembly process
+    -   Once we are assured that read quality looks decent based on NanoPlot results, we can begin the assembly process
 
     -   Since we are working with Nanopore long reads and have bacterial reads to assemble, we can use the [Flye](https://github.com/mikolmogorov/Flye) assembler
 
@@ -200,15 +199,15 @@ Flye is a de novo assembler and can be used with both PacBio and Oxford Nanopore
 
     -   We obtained several outputs, but the ones we want to concern ourselves today are is the assembly file `xan_22-331_nanopore.fna` and the graph file `xan_22-331_nanopore.gfa`
 
-    -   For a point of contrast, we also have short read data for this sample, obtained during a previous Illumina MiniSeq run
+    -   For a point of contrast, we also have short read data for this sample, obtained from a previous Illumina MiniSeq run
 
-        -   We had to use the the short read [SPAdes](https://github.com/ablab/spades) assembler to generate these assemblies
+        -   We had to use the the short read [SPAdes](https://github.com/ablab/spades) assembler to construct these assemblies
 
 ### Run QUAST to obtain assembly stats
 
-QUality ASsessment Tool ([QUAST](https://github.com/ablab/quast)) is used to generate some assembly QC reports. This program has a range features to evaluate and assess assembly quality, including how contiguous your assembly, N50, L50, and more.
+QUality ASsessment Tool ([QUAST](https://github.com/ablab/quast)) is used to generate some assembly QC reports. This program has a range features to evaluate and assess assembly quality, including metrics such as how contiguous your assembly is.
 
-As an optional input, users can input a reference by which to compare new assemblies to. We won't do this today, but if you do include this optional input, you will have a more robust report and more metrics by which to assess assembly quality.
+As an optional input, users can assign a reference genome to compare new assemblies to. We won't do this today, but if you do include this optional input, you will have a more robust report and more metrics by which to assess assembly quality.
 
 ------------------------------------------------------------------------
 
@@ -232,7 +231,7 @@ As an optional input, users can input a reference by which to compare new assemb
         quast cli_data/xan_22-331_shortread_highercov_spades.fna -o qc_quast/xan_22-331_shortread_higher_cov
         ```
 
-        Just for fun, we also happened to assemble a smaller subset of the original short reads, and our estimated depth of coverage is 10. Let's see what impact this has on assembly quality.
+        Just for fun, we also happened to subset the reads to a reduced number and how our estimated depth of coverage was 10, prior to assembly. Let's see what impact this has on assembly quality.
 
         **Command 3:**
 
@@ -246,7 +245,7 @@ As an optional input, users can input a reference by which to compare new assemb
     multiqc qc_quast -o multiqc_quast
     ```
 
-    We now have an easy-to-interpret summary report, like we generated for our NanoPlot results.
+    We now have an easy-to-interpret summary report like what we generated for our NanoPlot results.
 
 -   **Review results**
 
@@ -272,14 +271,14 @@ Select how you want to run Bandage
 
     -   If you choose this approach, you will need to download all three `.gfa` files from `cli_data` folder on Gitpod
     -   Simply right click and select `Download`from the options.
-    -   From there, you will one at a time, upload a graph and view them using the Bandage GUI on your personal computer
+    -   From there, you will, one at a time, upload a graph and view each one using the downloaded Bandage program on your personal computer
     -   First, take a look first at the nanopore assembly graph file: `xan_22-331_nanopore_flye.gfa`
     -   Second, take a look at the SPAdes higher coverage assembly graph file: `xan_22-331_shortread_highercov_spades.gfa`
     -   Third, take a look at the SPAdes lower coverage assembly graph file: `xan_22-331_shortread_lowcov_spades.gfa`
 
 -   **Option 2**: use the already installed version and run from the command line (less options and ability to interact with your graph)
 
-    To look at the long read assembly graph.
+    First, we'll look at the long read assembly graph.
 
     **Command 1:**
 
@@ -300,7 +299,7 @@ Select how you want to run Bandage
     Bandage image cli_data/xan_22-331_shortread_highercov_spades.gfa qc_bandage/xan_22-331_shortread_highercov_spades.png
     ```
 
-    Let's also look at the assembly graph if input into SPAdes assembler was a reduced number of reads
+    Let's also look at the assembly graph if input into SPAdes assembler was a reduced number of reads (10x estimate read coverage)
 
     **Command 3:**
 
@@ -318,7 +317,7 @@ Select how you want to run Bandage
 
 ### Next steps for manual workflow
 
-The above exercises were intended to give a framework for what is involved in analysis of ONT Nanopore long read data, when we do each step manually. A full analysis of the reads of several bacterial strains is multi-step and dictated by a researcher's specific goals.
+The above exercises were intended to give a framework for what is involved in analysis of ONT Nanopore long read data, when we do each step manually. A full analysis of Nanopore data is multi-step and dictated by a researcher's specific goals.
 
 ------------------------------------------------------------------------
 
