@@ -115,7 +115,7 @@ nextflow run -latest -resume -profile conda 'https://github.com/grunwaldlab/path
 ---
 
 <details>
-<summary style="font-size: 1.5em; font-weight: bold;">🧵 Assessing read and assembly quality after ONT run @Martha</summary> 
+<summary style="font-size: 1.5em; font-weight: bold;">🧵 Assessing read and assembly quality after ONT run @Martha and @Alex</summary> 
 
 Once a Nanopore run is complete, we need a way to critically assess read quality on a per sample basis, in order to decide if we can continue with downstream analysis.
 
