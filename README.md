@@ -22,7 +22,7 @@
 ---
 
 <details>
-<summary style="font-size: 1.5em; font-weight: bold;"> 🚩 Do this before the workshop @Camilo </summary>
+<summary style="font-size: 1.5em; font-weight: bold;"> 🚩 Prerequisites @Camilo </summary>
 
 #### 1. Gain some familiarity with Linux command-line interface
   Look here for resources:
