@@ -102,7 +102,7 @@ You MUST do the following steps before the workshop starts! It will take a few m
 
 Once a Nanopore run is complete, we need a way to critically assess read quality on a per sample basis, in order to decide if we can continue with downstream analysis.
 
-------------------------------------------------------------------------
+---
 
 ### A note on how to organize reads after a Nanopore sequencing run
 
@@ -116,7 +116,7 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
 
 [NanoPlot](https://github.com/wdecoster/NanoPlot) is a plotting tool for long read sequencing data and alignments
 
-------------------------------------------------------------------------
+---
 
 -   **Key outputs**
 
@@ -180,7 +180,7 @@ Once a Nanopore run is complete, we need a way to critically assess read quality
 
 Flye is a de novo assembler and can be used with both PacBio and Oxford Nanopore long reads. It is versatile and inputs can be both reads from prokaryotes and eukaryotes. After initial assembly, there are polishing steps.
 
-------------------------------------------------------------------------
+---
 
 -   **Information on running flye**
     -   Once we are assured that read quality looks decent based on NanoPlot results, we can begin the assembly process
@@ -209,7 +209,7 @@ QUality ASsessment Tool ([QUAST](https://github.com/ablab/quast)) is used to gen
 
 As an optional input, users can assign a reference genome to compare new assemblies to. We won't do this today, but if you do include this optional input, you will have a more robust report and more metrics by which to assess assembly quality.
 
-------------------------------------------------------------------------
+---
 
 -   **Run QUAST on our Nanopore flye assembly**
 
@@ -263,7 +263,7 @@ As an optional input, users can assign a reference genome to compare new assembl
 
 **Bioinformatics Application for Navigating *De novo* Assembly Graphs Easily (**[Bandage](https://rrwick.github.io/Bandage/)) is a program to visualize assembly graphs rapidly. Allows users to quickly see connections between contigs and also quickly see if there are problematic regions of the assembly
 
-------------------------------------------------------------------------
+---
 
 Select how you want to run Bandage
 
@@ -319,7 +319,7 @@ Select how you want to run Bandage
 
 The above exercises were intended to give a framework for what is involved in analysis of ONT Nanopore long read data, when we do each step manually. A full analysis of Nanopore data is multi-step and dictated by a researcher's specific goals.
 
-------------------------------------------------------------------------
+---
 
 **Subsequent steps include (but are not limited to):**
 
