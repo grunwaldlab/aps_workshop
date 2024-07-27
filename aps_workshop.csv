@@ -1,8 +1,9 @@
-sample_id,path,sequence_type,enabled,report_group_ids
-22-315,/data/reads/xan_22-315_nanopore.fastq.gz,nanopore,FALSE,xan
-22-321,/data/reads/xan_22-321_nanopore.fastq.gz,nanopore,FALSE,xan
-22-322,/data/reads/xan_22-322_nanopore.fastq.gz,nanopore,FALSE,xan
-22-323,/data/reads/xan_22-323_nanopore.fastq.gz,nanopore,FALSE,xan
-22-324,/data/reads/xan_22-324_nanopore.fastq.gz,nanopore,FALSE,xan
-22-325,/data/reads/xan_22-325_nanopore.fastq.gz,nanopore,FALSE,xan
-22-331,/data/reads/xan_22-331_nanopore.fastq.gz,nanopore,TRUE,xan
+sample_id,ncbi_accession,path,sequence_type,enabled,report_group_ids
+22-315,,/data/reads/xan_22-315_nanopore.fastq.gz,nanopore,FALSE,xan
+22-321,,/data/reads/xan_22-321_nanopore.fastq.gz,nanopore,FALSE,xan
+22-322,,/data/reads/xan_22-322_nanopore.fastq.gz,nanopore,FALSE,xan
+22-323,,/data/reads/xan_22-323_nanopore.fastq.gz,nanopore,FALSE,xan
+22-324,,/data/reads/xan_22-324_nanopore.fastq.gz,nanopore,FALSE,xan
+22-325,,/data/reads/xan_22-325_nanopore.fastq.gz,nanopore,FALSE,xan
+22-331,,/data/reads/xan_22-331_nanopore.fastq.gz,nanopore,TRUE,xan
+yeast,SRR11618440,,,FALSE,sc
