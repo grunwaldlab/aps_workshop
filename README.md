@@ -182,7 +182,7 @@ Flye is a de novo assembler and can be used with both PacBio and Oxford Nanopore
 
 ---
 
--   **Information on running flye**
+-   **Information on running Flye**
     -   Once we are assured that read quality looks decent based on NanoPlot results, we can begin the assembly process
 
     -   Since we are working with Nanopore long reads and have bacterial reads to assemble, we can use the [Flye](https://github.com/mikolmogorov/Flye) assembler
@@ -272,7 +272,7 @@ Select how you want to run Bandage
     -   If you choose this approach, you will need to download all three `.gfa` files from `cli_data` folder on Gitpod
     -   Simply right click and select `Download`from the options.
     -   From there, you will, one at a time, upload a graph and view each one using the downloaded Bandage program on your personal computer
-    -   First, take a look first at the nanopore assembly graph file: `xan_22-331_nanopore_flye.gfa`
+    -   First, take a look first at the Nanopore assembly graph file: `xan_22-331_nanopore_flye.gfa`
     -   Second, take a look at the SPAdes higher coverage assembly graph file: `xan_22-331_shortread_highercov_spades.gfa`
     -   Third, take a look at the SPAdes lower coverage assembly graph file: `xan_22-331_shortread_lowcov_spades.gfa`
 
